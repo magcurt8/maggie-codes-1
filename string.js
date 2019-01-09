@@ -1,10 +1,24 @@
+helperPrintFunction = function (printValue) {
+	console.log("Here be the thing", printValue)
+}
+
 String.prototype.endsWith = function(search, position) {
-	const difference = String.prototype.length - search.length - 1;
-	const originalValue = String.prototype.substring(difference);
-	if (search.match(originalValue)) {
-		return true;
-	} else {
-		return false;
+	// this is foo
+	// search is oo
+	search = search.toString()
+
+	// 3 - 2 == 1
+	// start at index 1, until end
+	const difference = (this.length - search.length)
+	const originalValue = this.substring(difference)
+
+	/*if (search.length == this.length) {
+		if (search.match(this)) {
+			return true
+		}
+	} else */if (search.match(originalValue)) {
+		return true
 	}
+	return false
 }
 
