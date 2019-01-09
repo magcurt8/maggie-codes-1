@@ -12,11 +12,11 @@ String.prototype.endsWith = function(search, position) {
 	const difference = (this.length - search.length)
 	const originalValue = this.substring(difference)
 
-	/*if (search.length == this.length) {
+	if (difference == 0) {
 		if (search.match(this)) {
 			return true
 		}
-	} else */if (search.match(originalValue)) {
+	} else if (search.match(originalValue)) {
 		return true
 	}
 	return false
